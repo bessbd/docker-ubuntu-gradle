@@ -8,6 +8,6 @@ RUN \
     webdriver-manager update && \
     curl -o sdkman.sh -s "https://get.sdkman.io" && \
     bash sdkman.sh && \
-    source "/root/.sdkman/bin/sdkman-init.sh" && \
+    . "/root/.sdkman/bin/sdkman-init.sh" && \
     sdk install gradle 4.6 && \
     rm -rf /var/lib/apt/lists/*
