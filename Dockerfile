@@ -1,7 +1,5 @@
-FROM gradle:jdk8-alpine as gradle
-
 FROM ubuntu:artful
-COPY --from=gradle /opt/gradle /opt/gradle
+COPY --from=gradle:jdk8-alpine /opt/gradle /opt/gradle
 RUN \
     apt-get update && \
     apt-get -y install --no-install-recommends openjdk-8-jdk-headless nodejs npm  && \
